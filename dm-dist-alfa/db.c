@@ -4,17 +4,17 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ***************************************************************************/
 
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 #include <time.h>
 
-#include "structs.h"
-#include "utils.h"
-#include "db.h"
 #include "comm.h"
+#include "db.h"
 #include "handler.h"
 #include "limits.h"
+#include "structs.h"
+#include "utils.h"
 
 #define NEW_ZONE_SYSTEM
 

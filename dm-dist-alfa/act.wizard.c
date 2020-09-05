@@ -4,18 +4,18 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
+#include <ctype.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctype.h>
 
+#include "comm.h"
+#include "db.h"
+#include "handler.h"
+#include "interpreter.h"
+#include "limits.h"
+#include "spells.h"
 #include "structs.h"
 #include "utils.h"
-#include "comm.h"
-#include "interpreter.h"
-#include "handler.h"
-#include "db.h"
-#include "spells.h"
-#include "limits.h"
 
 /*   external vars  */
 
