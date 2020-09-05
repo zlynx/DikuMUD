@@ -1,10 +1,11 @@
-#include <string.h>
-#include <stdio.h>
 #include <ctype.h>
+#include <stdio.h>
+#include <string.h>
 
-#include "utils.h"
-#include "structs.h"
 #include "comm.h"
+#include "interpreter.h"
+#include "structs.h"
+#include "utils.h"
 
 
 #define MAX_MSGS 50	               /* Max number of messages.          */
@@ -337,5 +338,6 @@ int board_show_board(struct char_data *ch, char *arg)
  	}
 	page_string(ch->desc, buf, 1);
 
+	board_save_board();
 	return(1);
 }
