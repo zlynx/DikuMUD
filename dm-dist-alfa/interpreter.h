@@ -1,7 +1,11 @@
 /* ************************************************************************
-*  file: Interpreter.h , Command interpreter module.      Part of DIKUMUD *
-*  Usage: Procedures interpreting user command                            *
-************************************************************************* */
+ *  file: Interpreter.h , Command interpreter module.      Part of DIKUMUD *
+ *  Usage: Procedures interpreting user command                            *
+ ************************************************************************* */
+
+#pragma once
+
+#include "structs.h"
 
 void command_interpreter(struct char_data *ch, char *argument);
 int search_block(char *arg, char **list, bool exact);

@@ -1,8 +1,11 @@
 /* ************************************************************************
-*  file: db.h , Database module.                          Part of DIKUMUD *
-*  Usage: Loading/Saving chars booting world.                             *
-************************************************************************* */
+ *  file: db.h , Database module.                          Part of DIKUMUD *
+ *  Usage: Loading/Saving chars booting world.                             *
+ ************************************************************************* */
 
+#pragma once
+
+#include "structs.h"
 
 /* data files used by the game system */
 

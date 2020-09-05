@@ -1,7 +1,11 @@
 /* ************************************************************************
-*  file: handler.h , Handler module.                      Part of DIKUMUD *
-*  Usage: Various routines for moving about objects/players               *
-************************************************************************* */
+ *  file: handler.h , Handler module.                      Part of DIKUMUD *
+ *  Usage: Various routines for moving about objects/players               *
+ ************************************************************************* */
+
+#pragma once
+
+#include "structs.h"
 
 /* handling the affected-structures */
 void affect_total(struct char_data *ch);
@@ -70,4 +74,3 @@ int generic_find(char *arg, int bitvector, struct char_data *ch,
 #define FIND_OBJ_ROOM      8
 #define FIND_OBJ_WORLD    16
 #define FIND_OBJ_EQUIP    32
-

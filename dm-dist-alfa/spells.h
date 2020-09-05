@@ -3,6 +3,10 @@
 *  Usage : Spells                                                         *
 ************************************************************************* */
 
+#pragma once
+
+#include "structs.h"
+
 #define MAX_BUF_LENGTH              240
 
 #define TYPE_UNDEFINED               -1
@@ -162,4 +166,3 @@ struct attack_hit_type {
   char *singular;
   char *plural;
 };
-

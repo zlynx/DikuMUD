@@ -1,7 +1,11 @@
 /* ************************************************************************
-*  file: comm.h , Communication module.                   Part of DIKUMUD *
-*  Usage: Prototypes for the common functions in comm.c                   *
-************************************************************************* */
+ *  file: comm.h , Communication module.                   Part of DIKUMUD *
+ *  Usage: Prototypes for the common functions in comm.c                   *
+ ************************************************************************* */
+
+#pragma once
+
+#include "structs.h"
 
 void send_to_all(char *messg);
 void send_to_char(char *messg, struct char_data *ch);

@@ -1,3 +1,5 @@
+#pragma once
+
 #define CHARSIZE sizeof(char)
 #define LONGSIZE sizeof(long)
 

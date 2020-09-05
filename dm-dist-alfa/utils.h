@@ -1,7 +1,9 @@
 /* ************************************************************************
-*  file: utils.h, Utility module.                         Part of DIKUMUD *
-*  Usage: Utility macros                                                  *
-************************************************************************* */
+ *  file: utils.h, Utility module.                         Part of DIKUMUD *
+ *  Usage: Utility macros                                                  *
+ ************************************************************************* */
+
+#pragma once
 
 #include <stdlib.h>
 

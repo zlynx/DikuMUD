@@ -1,7 +1,9 @@
 /* ************************************************************************
-*  file: structs.h , Structures        .                  Part of DIKUMUD *
-*  Usage: Declarations of central data structures                         *
-************************************************************************* */
+ *  file: structs.h , Structures        .                  Part of DIKUMUD *
+ *  Usage: Declarations of central data structures                         *
+ ************************************************************************* */
+
+#pragma once
 
 #include <sys/types.h>
 #include <crypt.h>
