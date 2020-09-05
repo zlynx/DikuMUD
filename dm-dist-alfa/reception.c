@@ -5,16 +5,16 @@
 ************************************************************************* */
 
 #include <stdio.h>
-#include <sys/time.h>
 #include <string.h>
+#include <time.h>
 
-#include "structs.h"
 #include "comm.h"
-#include "handler.h"
 #include "db.h"
+#include "handler.h"
 #include "interpreter.h"
-#include "utils.h"
 #include "spells.h"
+#include "structs.h"
+#include "utils.h"
 
 #define OBJ_SAVE_FILE "pcobjs.obj"
 #define OBJ_FILE_FREE "\0\0\0"

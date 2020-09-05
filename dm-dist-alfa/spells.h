@@ -166,3 +166,6 @@ struct attack_hit_type {
   char *singular;
   char *plural;
 };
+
+bool saves_spell(struct char_data *ch, sh_int save_type);
+bool circle_follow(struct char_data *ch, struct char_data *victim);

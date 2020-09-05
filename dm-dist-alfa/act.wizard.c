@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #include "comm.h"
 #include "db.h"
@@ -1537,4 +1538,3 @@ void do_noshout(struct char_data *ch, char *argument, int cmd)
 		SET_BIT(vict->specials.act, PLR_NOSHOUT);
 	}
 }
-
