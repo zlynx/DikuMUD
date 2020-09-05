@@ -297,7 +297,7 @@ void do_insult(struct char_data *ch, char *argument, int cmd)
 void boot_pose_messages(void)
 {
   FILE *fl;
-  byte counter;
+  int counter;
   int tmp;
   byte class;
 
@@ -325,8 +325,8 @@ void boot_pose_messages(void)
 
 void do_pose(struct char_data *ch, char *argument, int cmd)
 {
-	byte to_pose;
-	byte counter;
+	int to_pose;
+	int counter;
 
 	if ((GET_LEVEL(ch) < pose_messages[0].level) || IS_NPC(ch))
 	{

@@ -127,14 +127,14 @@
 
 struct spell_info_type
 {
-	void (*spell_pointer) (byte level, struct char_data *ch, char *arg, int type,
+	void (*spell_pointer) (ubyte level, struct char_data *ch, char *arg, int type,
 	                       struct char_data *tar_ch, struct obj_data *tar_obj);
-	byte minimum_position;  /* Position for caster 						 */
+	ubyte minimum_position;  /* Position for caster 						 */
 	ubyte min_usesmana;     /* Amount of mana used by a spell	 */
-	byte beats;             /* Heartbeats until ready for next */
+	ubyte beats;             /* Heartbeats until ready for next */
 
-	byte min_level_cleric;  /* Level required for cleric       */
-	byte min_level_magic;   /* Level required for magic user   */
+	ubyte min_level_cleric;  /* Level required for cleric       */
+	ubyte min_level_magic;   /* Level required for magic user   */
 	sh_int targets;         /* See below for use with TAR_XXX  */
 };
 

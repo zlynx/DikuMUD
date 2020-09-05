@@ -153,7 +153,7 @@ struct obj_flag_data
 
 /* Used in OBJ_FILE_ELEM *DO*NOT*CHANGE* */
 struct obj_affected_type {
-	byte location;      /* Which ability to change (APPLY_XXX) */
+	ubyte location;     /* Which ability to change (APPLY_XXX) */
 	sbyte modifier;     /* How much it changes by              */
 };
 
@@ -419,9 +419,9 @@ struct char_player_data
 	char *long_descr;   /* for 'look'.. Only here for testing   */
 	char *description;  /* Extra descriptions                   */
 	char *title;        /* PC / NPC s title                     */
-	byte sex;           /* PC / NPC s sex                       */
-	byte class;         /* PC s class or NPC alignment          */
-	byte level;         /* PC / NPC s level                     */
+	ubyte sex;          /* PC / NPC s sex                       */
+	ubyte class;        /* PC s class or NPC alignment          */
+	ubyte level;        /* PC / NPC s level                     */
 	int hometown;       /* PC s Hometown (zone)                 */
 	bool talks[MAX_TOUNGE]; /* PC s Tounges 0 for NPC           */
 	struct time_data time; /* PC s AGE in days                  */
@@ -577,9 +577,9 @@ struct weather_data
 
 struct char_file_u
 {
-	byte sex;
-	byte class;
-	byte level;
+	ubyte sex;
+	ubyte class;
+	ubyte level;
 	time_t birth;  /* Time of birth of character     */
   int played;    /* Number of secs played in total */
 
