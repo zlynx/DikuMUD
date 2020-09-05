@@ -4,17 +4,17 @@
 *  Copyright (C) 1990, 1991 - see 'license.doc' for complete information. *
 ************************************************************************* */
 
-#include <stdio.h>
 #include <assert.h>
+#include <stdio.h>
 #include <string.h>
 
-#include "structs.h"
-#include "utils.h"
 #include "comm.h"
 #include "db.h"
+#include "handler.h"
 #include "interpreter.h" 
 #include "spells.h"
-#include "handler.h"
+#include "structs.h"
+#include "utils.h"
 
 #define MANA_MU 1
 #define MANA_CL 1

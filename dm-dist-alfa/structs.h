@@ -5,8 +5,8 @@
 
 #pragma once
 
-#include <sys/types.h>
 #include <crypt.h>
+#include <sys/types.h>
 
 typedef signed char sbyte;
 typedef unsigned char ubyte;
@@ -169,8 +169,8 @@ struct obj_data
 	char *name;                    /* Title of object :get etc.        */
 	char *description ;            /* When in room                     */
 	char *short_description;       /* when worn/carry/in cont.         */
- 	char *action_description;      /* What to write when used          */
- 	struct extra_descr_data *ex_description; /* extra descriptions     */
+	char *action_description;      /* What to write when used          */
+	struct extra_descr_data *ex_description; /* extra descriptions     */
 	struct char_data *carried_by;  /* Carried by :NULL in room/conta   */
 
 	struct obj_data *in_obj;       /* In what object NULL when none    */
@@ -207,11 +207,11 @@ struct obj_data
 #define UP             4
 #define DOWN           5
 
-#define EX_ISDOOR		1
-#define EX_CLOSED		2
-#define EX_LOCKED		4
-#define EX_RSCLOSED	8
-#define EX_RSLOCKED	16
+#define EX_ISDOOR     1
+#define EX_CLOSED     2
+#define EX_LOCKED     4
+#define EX_RSCLOSED   8
+#define EX_RSLOCKED  16
 #define EX_PICKPROOF 32
 
 /* For 'Sector types' */
@@ -227,10 +227,10 @@ struct obj_data
 
 struct room_direction_data
 {
-	char *general_description;       /* When look DIR.                  */ 
-	char *keyword;                   /* for open/close                  */	
+	char *general_description;       /* When look DIR.                  */
+	char *keyword;                   /* for open/close                  */
 	sh_int exit_info;                /* Exit info                       */
-	sh_int key;		                   /* Key's number (-1 for no key)    */
+	sh_int key;                      /* Key's number (-1 for no key)    */
 	sh_int to_room;                  /* Where direction leeds (NOWHERE) */
 };
 
@@ -244,7 +244,7 @@ struct room_data
 	char *description;           /* Shown when entered                 */
 	struct extra_descr_data *ex_description; /* for examine/look       */
 	struct room_direction_data *dir_option[6]; /* Directions           */
-	sh_int room_flags;           /* DEATH,DARK ... etc                 */ 
+	sh_int room_flags;           /* DEATH,DARK ... etc                 */
 	byte light;                  /* Number of lightsources in room     */
 	int (*funct)();              /* special procedure                  */
          
@@ -414,7 +414,7 @@ struct time_data
 
 struct char_player_data
 {
-	char *name;    	    /* PC / NPC s name (kill ...  )         */
+	char *name;         /* PC / NPC s name (kill ...  )         */
 	char *short_descr;  /* for 'actions'                        */
 	char *long_descr;   /* for 'look'.. Only here for testing   */
 	char *description;  /* Extra descriptions                   */
@@ -424,7 +424,7 @@ struct char_player_data
 	byte level;         /* PC / NPC s level                     */
 	int hometown;       /* PC s Hometown (zone)                 */
 	bool talks[MAX_TOUNGE]; /* PC s Tounges 0 for NPC           */
- 	struct time_data time; /* PC s AGE in days                  */
+	struct time_data time; /* PC s AGE in days                  */
 	struct time_data tmptime; /* PC s AGE in days, modified     */
 	ubyte weight;       /* PC / NPC s weight                    */
 	ubyte height;       /* PC / NPC s height                    */
@@ -549,24 +549,24 @@ struct char_data
 
 /* How much light is in the land ? */
 
-#define SUN_DARK	0
-#define SUN_RISE	1
-#define SUN_LIGHT	2
-#define SUN_SET		3
+#define SUN_DARK  0
+#define SUN_RISE  1
+#define SUN_LIGHT 2
+#define SUN_SET   3
 
 /* And how is the sky ? */
 
-#define SKY_CLOUDLESS	0
-#define SKY_CLOUDY	1
-#define SKY_RAINING	2
-#define SKY_LIGHTNING	3
+#define SKY_CLOUDLESS 0
+#define SKY_CLOUDY    1
+#define SKY_RAINING   2
+#define SKY_LIGHTNING 3
 
 struct weather_data
 {
-	int pressure;	/* How is the pressure ( Mb ) */
-	int change;	/* How fast and what way does it change. */
-	int sky;	/* How is the sky. */
-	int sunlight;	/* And how much sun. */
+	int pressure;  /* How is the pressure ( Mb ) */
+	int change;    /* How fast and what way does it change. */
+	int sky;       /* How is the sky. */
+	int sunlight;  /* And how much sun. */
 };
 
 
@@ -670,7 +670,7 @@ struct txt_q
 /* modes of connectedness */
 
 #define CON_PLYNG   0
-#define CON_NME	    1
+#define CON_NME     1
 #define CON_NMECNF  2
 #define CON_PWDNRM  3
 #define CON_PWDGET  4
@@ -686,7 +686,7 @@ struct txt_q
 
 struct snoop_data
 {
-	struct char_data *snooping;	
+	struct char_data *snooping;
 		/* Who is this char snooping */
 	struct char_data *snoop_by;
 		/* And who is snooping on this char */
@@ -694,14 +694,14 @@ struct snoop_data
 
 struct descriptor_data
 {
-	int descriptor;	            /* file descriptor for socket */
+	int descriptor;               /* file descriptor for socket */
 	char host[50];                /* hostname                   */
 	char pwd[CRYPT_OUTPUT_SIZE+1];/* password                   */
 	int pos;                      /* position in player-file    */
 	int connected;                /* mode of 'connectedness'    */
 	int wait;                     /* wait for how many loops    */
-	char *showstr_head;				/* for paging through texts	*/
-	char *showstr_point;				/*       -                    */
+	char *showstr_head;           /* for paging through texts   */
+	char *showstr_point;          /*       -                    */
 	char **str;                   /* for the modify-str system  */
 	int max_str;                  /* -                          */
 	int prompt_mode;              /* control of prompt-printing */
@@ -710,8 +710,8 @@ struct descriptor_data
 	struct txt_q output;          /* q of strings to send       */
 	struct txt_q input;           /* q of unprocessed input     */
 	struct char_data *character;  /* linked to char             */
-   struct char_data *original;   /* original char              */
-	struct snoop_data snoop;      /* to snoop people.	         */
+  struct char_data *original;   /* original char              */
+	struct snoop_data snoop;      /* to snoop people.           */
 	struct descriptor_data *next; /* link to next descriptor    */
 };
 
@@ -734,9 +734,9 @@ struct message_type
 
 struct message_list
 {
-	int a_type;               /* Attack type 						 */
-	int number_of_attacks;	  /* How many attack messages to chose from. */
-	struct message_type *msg; /* List of messages.				 */
+	int a_type;               /* Attack type */
+	int number_of_attacks;    /* How many attack messages to chose from. */
+	struct message_type *msg; /* List of messages. */
 };
 
 struct dex_skill_type
