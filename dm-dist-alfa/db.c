@@ -33,6 +33,7 @@ struct message_list fight_messages[MAX_MESSAGES]; /* fighting messages   */
 struct player_index_element *player_table = 0; /* index to player file   */
 int top_of_p_table = 0;               /* ref to top of table             */
 int top_of_p_file = 0;
+struct reset_q_type reset_q;
 
 char credits[MAX_STRING_LENGTH];      /* the Credits List                */
 char news[MAX_STRING_LENGTH];	        /* the news                        */
@@ -2291,5 +2292,4 @@ int real_object(int virtual)
 			bot = mid + 1;
 	}
 }
-
 

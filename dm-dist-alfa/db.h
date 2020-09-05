@@ -150,7 +150,7 @@ struct reset_q_type
 {
 	struct reset_q_element *head;
 	struct reset_q_element *tail;
-} reset_q;
+};
 
 
 
